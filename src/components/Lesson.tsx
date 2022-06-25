@@ -5,6 +5,13 @@ import { Link, useParams } from "react-router-dom";
 
 import classNames from "classnames";
 
+interface LessonProps {
+  title: string;
+  slug: string;
+  availableAt: Date;
+  type: "live" | "class";
+}
+
 export function Lesson(props: LessonProps) {
   const { slug } = useParams<{ slug: string }>();
 
